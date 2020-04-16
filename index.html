@@ -77,7 +77,7 @@
             function deleteItem(id){
                 $.ajax({
                     method: 'POST',
-                    url: 'http://itemapi3.test/api/items/'+id,
+                    url: 'http://itemapi.test/api/items/'+id,
                     data: {_method: 'DELETE'}
                 }).done(function(){
                     alert('Item Removed');
@@ -89,7 +89,7 @@
             function addItem(text, body){
                 $.ajax({
                     method:'POST',
-                    url:'http://itemapi3.test/api/items',
+                    url:'http://itemapi.test/api/items',
                     data: {text: text, body: body}
                 }).done(function(item){
                     alert("Item #"+item.id+" has been added.");
@@ -102,7 +102,7 @@
             //Get Item from API
             function getItems(){
                 $.ajax({
-                    url:'http://itemapi3.test/api/items'
+                    url:'http://itemapi.test/api/items'
                 }).done(function(items){
                     output = '';
                     $.each(items, function(key, item){
